@@ -1,0 +1,18 @@
+.LoginComponent{
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 30%;
+    margin: 100 auto; 
+    padding:100px;
+    text-align: center;
+}
+
+.LoginComponent input{
+    display: block;
+    margin: 10px auto;
+}
+
+.LoginComponent button{
+    display: block;
+    margin: 10px auto;
+}
