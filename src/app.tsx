@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Switch, BrowserRouter, Link, Route} from "react-router-dom";
 import { PrivateRoute, RenderRoutes, RouteType} from "./routes";
 import {AuthService} from "./services";
-import {Login} from "./components";
+import {Login, CreateAccount} from "./components";
 
 
 const ROUTES: RouteType[] = [
@@ -18,13 +18,17 @@ const App = () =>{
     setState(!state)
     return loginResult 
   }
-  const loginProps = {authenticate:loginCallback, checkAuthentication:AuthService.isloggedin, redirect:"/"}
+  const createAccountRoute = "/createaccount"
+  const createUser:(username:string, password:string)=>boolean = (username:string, password:string)=>{return false}
+  const loginProps = {authenticate:loginCallback, checkAuthentication:AuthService.isloggedin, redirectRoute:"/", createAccountRoute:createAccountRoute}
+  const createProps = {checkAuthentication:AuthService.isloggedin, createUser, redirectRoute:"/", loginRoute:""}
   const NotFound = ()=><div>404 not found</div>
   return(
     <div>
       <BrowserRouter>
           <Switch>
             <Route path="/login" exact render={()=><Login {...loginProps}/>}/>
+            <Route path={createAccountRoute} exact render={()=><CreateAccount {...createProps}/>}/>
             {RenderRoutes(ROUTES)}
             <Route component={NotFound}/>
           </Switch>

@@ -1,0 +1,23 @@
+{
+    "portfolios":[
+        {
+            "name":"coinbase"
+        }
+    ],
+    "transactions":[
+        {
+            "id":"0",
+            "portfolio":"coinbase",
+            "market":"crypto",
+            "type":"buy",
+            "ticker":"BTC",
+            "volume":"0.05",
+            "pair":"USD",
+            "pair-volume":"2000",
+            "date":"01-09-2021",
+            "time":"1200",
+            "price":"",
+            "notes":""
+        }
+    ]
+}

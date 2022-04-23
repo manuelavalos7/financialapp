@@ -1,0 +1,23 @@
+input {
+    display: block;
+    margin: 10px auto;
+}
+
+button{
+    display: block;
+    margin: 10 auto;
+    padding: 10px;
+    background-color: lightgreen;
+
+}
+
+.CreateAccountComponent{
+    border:1px solid black;
+    border-radius: 10px;
+}
+
+p{
+    display: block;
+    margin: 10 auto;
+    text-align: center;
+}
